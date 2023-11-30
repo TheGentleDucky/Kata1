@@ -24,6 +24,6 @@ public class Person {
     }
 
     public int toYears(long days){
-
+        return(int)(days/365.2);
     }
 }
