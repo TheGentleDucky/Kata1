@@ -21,9 +21,9 @@ public class Person {
 
     public int getAge(){
         return toYears(LocalDate.now().toEpochDay() - birthday.toEpochDay());
-    }
 
-    public int toYears(long days) {
+    }
+    public int toYears(long days){
         return (int)(days/365.2);
     }
 }
