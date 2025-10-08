@@ -2,13 +2,15 @@ package software.ulpgc.kata1;
 
 import java.time.LocalDate;
 
-public class Person {
+public class Esqueleto {
     private final String name;
     private final LocalDate birthday;
+    private final int numHuesos;
 
-    public Person(String name, LocalDate birthday) {
+    public Esqueleto(String name, LocalDate birthday, int numHuesos) {
         this.name = name;
         this.birthday = birthday;
+        this.numHuesos = numHuesos;
     }
 
     public String getName() {
@@ -17,6 +19,10 @@ public class Person {
 
     public LocalDate getBirthday() {
         return birthday;
+    }
+
+    public int getNumHuesos() {
+        return numHuesos;
     }
 
     public int getAge(){
