@@ -4,12 +4,12 @@ import java.time.LocalDate;
 
 public class Esqueleto {
     private final String name;
-    private final LocalDate birthday;
+    private final LocalDate birthdate;
     private final int numHuesos;
 
-    public Esqueleto(String name, LocalDate birthday, int numHuesos) {
+    public Esqueleto(String name, LocalDate birthdate, int numHuesos) {
         this.name = name;
-        this.birthday = birthday;
+        this.birthdate = birthdate;
         this.numHuesos = numHuesos;
     }
 
@@ -17,18 +17,18 @@ public class Esqueleto {
         return name;
     }
 
-    public LocalDate getBirthday() {
-        return birthday;
+    public LocalDate getBirthdate() {
+        return birthdate;
     }
 
     public int getNumHuesos() {
         return numHuesos;
     }
 
-    public int getAge(){
-        return toYears(LocalDate.now().toEpochDay()- birthday.toEpochDay());
-    }
+    public int getAge() {
+        return toYears(LocalDate.now().toEpochDay() - birthdate.toEpochDay());
 
+    }
     public int toYears(long days){
         return(int)(days/365.2);
     }
