@@ -6,6 +6,11 @@ public class Esqueleto {
     private final String name;
     private final int numHuesos;
     private final LocalDate birthdate;
+    public Esqueleto(String name, int numHuesos, LocalDate birthdate) {
+        this.name = name;
+        this.numHuesos = numHuesos;
+        this.birthdate = birthdate;
+    }
 
     public String getName() {
         return name;
@@ -19,17 +24,10 @@ public class Esqueleto {
         return birthdate;
     }
 
-    public Esqueleto(String name, int numHuesos, LocalDate birthdate) {
-        this.name = name;
-        this.numHuesos = numHuesos;
-        this.birthdate = birthdate;
-    }
-
-    public int getAge(){
+    public int getAge() {
         return toYears(LocalDate.now().toEpochDay() - birthdate.toEpochDay());
     }
-
     public int toYears(long days){
-        return(int)(days/365.2);
+        return (int)(days/365.2);
     }
 }
